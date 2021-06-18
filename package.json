@@ -1,0 +1,17 @@
+{
+  "name": "13-node-crud",
+  "version": "2.2.2",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "rsaman <rsaman@gmail.com> (http://ridvansaman.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "pug": "^3.0.2"
+  }
+}

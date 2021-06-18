@@ -1,0 +1,25 @@
+extends layout
+
+block layout-content
+  div.container
+    h3
+      a.btn.btn-secondary(href='/home') Create New
+      | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Students List
+    table.table.table-striped
+      thead
+        tr
+          th Student
+          th First Name
+          th Last Name
+          th Age
+          th
+      tbody
+      each student, index in students
+        tr
+          td #{index+1}
+          td #{student.firstname}
+          td #{student.lastname}
+          td #{student.age}
+          td
+            a.btn.btn-primary.btn-sm(href=`/student/`+student._id) Edit
+            a.btn.btn-danger.btn-sm(href=`/student/delete/${student._id}` onclick="return confirm('Are you sure you want to delete this record ?');") Delete

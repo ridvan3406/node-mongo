@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  div.card(style={width:"500px", margin:"0 auto"})
+    h3 Student Profile
+    //- form(action=`/student/${student._id}` method='POST' )
+    form(action=`/student/${student._id}` method='POST' )
+      input(type='hidden' name='_id' value=student._id)
+      .form-group
+        label Full Name
+        input.form-control(type='text' name='firstname' placeholder='First Name' value=student.firstname)
+      .form-group
+        label Lastname
+        input.form-control(type='text' name='lastname' placeholder='Email' value=student.lastname)
+      .form-row
+        .form-group.col-md-6
+          label Age
+          input.form-control(type='number' name='age' placeholder='Age' value=student.age)
+      .form-group
+        button.btn.btn-info(type='submit') Submit
+    a.btn.btn-secondary(href='/student/list') View All
